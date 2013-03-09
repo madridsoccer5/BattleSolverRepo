@@ -80,7 +80,7 @@
 -(void)mainMenuButton:(id) sender{
     
     
-    [[CCDirector sharedDirector]replaceScene:[CCTransitionFadeDown transitionWithDuration:3 scene:[mainMenuLayer node]]];
+    [[CCDirector sharedDirector]replaceScene:[CCTransitionFadeDown transitionWithDuration:1 scene:[mainMenuLayer node]]];
     
 }
 
