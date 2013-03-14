@@ -16,6 +16,9 @@
 @implementation AppDelegate
 
 @synthesize window;
+const int TILESIZE = 52;
+const int MAXHEIGHT = 6;
+const int MAXWIDTH = 6;
 
 - (void) removeStartupFlicker
 {

@@ -121,6 +121,7 @@ bool twoPlayers;
     [playerOne addSubview:myTextField];
 	[playerOne show];
 	[playerOne release];
+    
 
     
 }

@@ -49,6 +49,7 @@
 // XXX: Optmization
 struct transformValues_ {
 	CGPoint pos;		// position x and y
+    CGPoint oldPos;     // oldposition x and y
 	CGPoint	scale;		// scale x and y
 	float	rotation;
 	CGPoint skew;		// skew x and y

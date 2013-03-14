@@ -134,13 +134,12 @@
 		3FFF8E1916EA474D00A6B620 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF85FF16EA474800A6B620 /* Icon.png */; };
 		3FFF8E1A16EA474D00A6B620 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF860016EA474800A6B620 /* Icon@2x.png */; };
 		3FFF8E1C16EA474D00A6B620 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF860216EA474800A6B620 /* iTunesArtwork */; };
-		3FFF8E1D16EA474D00A6B620 /* Radar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF860316EA474800A6B620 /* Radar.png */; };
-		3FFF8E1E16EA474D00A6B620 /* radarcoordinates.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF860416EA474800A6B620 /* radarcoordinates.plist */; };
 		3FFF8E1F16EA474D00A6B620 /* Red_50x50.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF860516EA474800A6B620 /* Red_50x50.png */; };
 		3FFF95C316EA474E00A6B620 /* soundOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF8E0716EA474D00A6B620 /* soundOff.png */; };
 		3FFF95C416EA474E00A6B620 /* soundOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF8E0816EA474D00A6B620 /* soundOn.png */; };
 		3FFF95C516EA474E00A6B620 /* tap-to-continue.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF8E0916EA474D00A6B620 /* tap-to-continue.png */; };
 		3FFF95C616EA474E00A6B620 /* waves.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF8E0A16EA474D00A6B620 /* waves.jpg */; };
+		3FFF95CA16EBADB400A6B620 /* shipcontainer.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF95C916EBADB400A6B620 /* shipcontainer.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -394,13 +393,12 @@
 		3FFF860016EA474800A6B620 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		3FFF860116EA474800A6B620 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FFF860216EA474800A6B620 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
-		3FFF860316EA474800A6B620 /* Radar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Radar.png; sourceTree = "<group>"; };
-		3FFF860416EA474800A6B620 /* radarcoordinates.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = radarcoordinates.plist; sourceTree = "<group>"; };
 		3FFF860516EA474800A6B620 /* Red_50x50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Red_50x50.png; sourceTree = "<group>"; };
 		3FFF8E0716EA474D00A6B620 /* soundOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soundOff.png; sourceTree = "<group>"; };
 		3FFF8E0816EA474D00A6B620 /* soundOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soundOn.png; sourceTree = "<group>"; };
 		3FFF8E0916EA474D00A6B620 /* tap-to-continue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tap-to-continue.png"; sourceTree = "<group>"; };
 		3FFF8E0A16EA474D00A6B620 /* waves.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = waves.jpg; sourceTree = "<group>"; };
+		3FFF95C916EBADB400A6B620 /* shipcontainer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shipcontainer.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -800,6 +798,7 @@
 				3FFF85F616EA474800A6B620 /* CruiserShip1.png */,
 				3FFF85F716EA474800A6B620 /* Default.png */,
 				3FFF85F816EA474800A6B620 /* Empire_of_the_Gun_015_sec_preview.mp3 */,
+				3FFF95C916EBADB400A6B620 /* shipcontainer.png */,
 				3FFF85F916EA474800A6B620 /* fps_images.png */,
 				3FFF85FA16EA474800A6B620 /* gridLayer.tmx */,
 				3FFF85FB16EA474800A6B620 /* Icon-72.png */,
@@ -810,8 +809,6 @@
 				3FFF860016EA474800A6B620 /* Icon@2x.png */,
 				3FFF860116EA474800A6B620 /* Info.plist */,
 				3FFF860216EA474800A6B620 /* iTunesArtwork */,
-				3FFF860316EA474800A6B620 /* Radar.png */,
-				3FFF860416EA474800A6B620 /* radarcoordinates.plist */,
 				3FFF860516EA474800A6B620 /* Red_50x50.png */,
 				3FFF8E0716EA474D00A6B620 /* soundOff.png */,
 				3FFF8E0816EA474D00A6B620 /* soundOn.png */,
@@ -889,13 +886,12 @@
 				3FFF8E1916EA474D00A6B620 /* Icon.png in Resources */,
 				3FFF8E1A16EA474D00A6B620 /* Icon@2x.png in Resources */,
 				3FFF8E1C16EA474D00A6B620 /* iTunesArtwork in Resources */,
-				3FFF8E1D16EA474D00A6B620 /* Radar.png in Resources */,
-				3FFF8E1E16EA474D00A6B620 /* radarcoordinates.plist in Resources */,
 				3FFF8E1F16EA474D00A6B620 /* Red_50x50.png in Resources */,
 				3FFF95C316EA474E00A6B620 /* soundOff.png in Resources */,
 				3FFF95C416EA474E00A6B620 /* soundOn.png in Resources */,
 				3FFF95C516EA474E00A6B620 /* tap-to-continue.png in Resources */,
 				3FFF95C616EA474E00A6B620 /* waves.jpg in Resources */,
+				3FFF95CA16EBADB400A6B620 /* shipcontainer.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

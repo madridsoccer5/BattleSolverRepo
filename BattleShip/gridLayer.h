@@ -11,6 +11,12 @@
 
 @interface gridLayer : CCLayer {
     CCTMXTiledMap *tileMap;
+    CCTMXLayer *layerOne;
+    CCSprite * background;
+    CCSprite * selSprite;
+    NSMutableArray * movableSprites;
+    CGPoint oldPos;
 }
 +(CCScene *) scene;
+@property CGPoint oldPos;
 @end

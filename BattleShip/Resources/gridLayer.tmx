@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="6" height="6" tilewidth="50" tileheight="50">
+<map version="1.0" orientation="orthogonal" width="6" height="9" tilewidth="50" tileheight="50">
  <tileset firstgid="1" name="Ocean" tilewidth="50" tileheight="50">
   <image source="waves.jpg" trans="ffffff" width="259" height="194"/>
  </tileset>
- <layer name="Texture" width="6" height="6">
+ <layer name="Texture" width="6" height="9">
   <data encoding="base64" compression="zlib">
-   eJxdzDkOwDAIBVHiJbEJTu5/W0/xC+TiSTASXGZWUNHQtd94MDDhai8CS/3XnPun7kcf6SZSz782VZwBYg==
+   eJxjZGBgYAJiZiBmAWJWKJ8NiNmBmAOIOYGYCyrGDcQ8QMwLFeeHspHF+aDiXGjiHEh6eJDEkc2iFgYA4UACcA==
   </data>
  </layer>
 </map>
