@@ -140,6 +140,7 @@
 		3FFF95C516EA474E00A6B620 /* tap-to-continue.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF8E0916EA474D00A6B620 /* tap-to-continue.png */; };
 		3FFF95C616EA474E00A6B620 /* waves.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF8E0A16EA474D00A6B620 /* waves.jpg */; };
 		3FFF95CA16EBADB400A6B620 /* shipcontainer.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF95C916EBADB400A6B620 /* shipcontainer.png */; };
+		BC472D7616F22AE400229F10 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = BC472D7516F22AE400229F10 /* Player.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -399,6 +400,8 @@
 		3FFF8E0916EA474D00A6B620 /* tap-to-continue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tap-to-continue.png"; sourceTree = "<group>"; };
 		3FFF8E0A16EA474D00A6B620 /* waves.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = waves.jpg; sourceTree = "<group>"; };
 		3FFF95C916EBADB400A6B620 /* shipcontainer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shipcontainer.png; sourceTree = "<group>"; };
+		BC472D7416F22AE400229F10 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		BC472D7516F22AE400229F10 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -466,6 +469,8 @@
 				3FFF851F16EA3B8900A6B620 /* gameController.m */,
 				3FFF851816EA3A7A00A6B620 /* mainMenu.h */,
 				3FFF851916EA3A7A00A6B620 /* mainMenu.m */,
+				BC472D7416F22AE400229F10 /* Player.h */,
+				BC472D7516F22AE400229F10 /* Player.m */,
 				3FFF850D16EA39B600A6B620 /* startMenu.h */,
 				3FFF850E16EA39B600A6B620 /* startMenu.m */,
 				3FFF851016EA39B600A6B620 /* GameConfig.h */,
@@ -1003,6 +1008,7 @@
 				3FFF851A16EA3A7A00A6B620 /* mainMenu.m in Sources */,
 				3FFF851D16EA3AF400A6B620 /* gridLayer.m in Sources */,
 				3FFF852016EA3B8900A6B620 /* gameController.m in Sources */,
+				BC472D7616F22AE400229F10 /* Player.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
