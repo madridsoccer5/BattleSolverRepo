@@ -14,6 +14,7 @@
 #import "CDAudioManager.h"
 #import "CocosDenshion.h"
 #import "CCAnimation.h"
+#import "Player.h"
 
 int playerCount = 0;
 bool twoPlayers;
@@ -109,6 +110,18 @@ bool twoPlayers;
 }
 //UIAlertview for one player.
 -(void)onePlayer:(id) sender{
+    
+    //TESTING PLAYER CLASS
+    NSString *testName = @"Michael";
+    NSInteger *testInt = 10;
+    Player *testPlayer = [[Player alloc] PlayerInitWithName:testName];
+    [testPlayer setScore:testInt];
+    NSString *testString = testPlayer.getName;
+    //NSInteger *testSetters = testPlayer.getScore;
+    //  NSString *testSetters = [NSString stringWithFormat:@"%d", 12/*testPlayer.getScore*/];
+    NSLog(testString);
+
+    
     playerCount = 1;
     UIAlertView *playerOne = [[UIAlertView alloc] init];
 	[playerOne setTitle:@"Player One"];
