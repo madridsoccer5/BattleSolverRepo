@@ -8,6 +8,7 @@
 
 #import "gridLayer.h"
 #import "mainMenu.h"
+#import "Player.h"
 extern const int TILESIZE;
 extern const int MAXWIDTH;
 extern const int MAXHEIGHT;
@@ -74,6 +75,10 @@ int counter =0;
         [self addChild: dispRect z:2];
         [self addChild: mainMenu z:3];
         [self addChild: tileMap z:1];
+        
+        //TESTING GLOBALS PLAYER CLASS by displaying contents of getName()
+        NSLog([Globals sharedGlobals].player1.getName);
+        NSLog([Globals sharedGlobals].player2.getName);
 
         [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
         

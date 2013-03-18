@@ -141,6 +141,7 @@
 		3FFF95C616EA474E00A6B620 /* waves.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF8E0A16EA474D00A6B620 /* waves.jpg */; };
 		3FFF95CA16EBADB400A6B620 /* shipcontainer.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF95C916EBADB400A6B620 /* shipcontainer.png */; };
 		BC472D7616F22AE400229F10 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = BC472D7516F22AE400229F10 /* Player.m */; };
+		BC472D7916F35C4E00229F10 /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = BC472D7816F35C4E00229F10 /* Globals.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -402,6 +403,8 @@
 		3FFF95C916EBADB400A6B620 /* shipcontainer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shipcontainer.png; sourceTree = "<group>"; };
 		BC472D7416F22AE400229F10 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		BC472D7516F22AE400229F10 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		BC472D7716F35C4E00229F10 /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
+		BC472D7816F35C4E00229F10 /* Globals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Globals.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -465,6 +468,8 @@
 				3FFF850B16EA39B600A6B620 /* RootViewController.m */,
 				3FFF851B16EA3AF400A6B620 /* gridLayer.h */,
 				3FFF851C16EA3AF400A6B620 /* gridLayer.m */,
+				BC472D7816F35C4E00229F10 /* Globals.m */,
+				BC472D7716F35C4E00229F10 /* Globals.h */,
 				3FFF851E16EA3B8900A6B620 /* gameController.h */,
 				3FFF851F16EA3B8900A6B620 /* gameController.m */,
 				3FFF851816EA3A7A00A6B620 /* mainMenu.h */,
@@ -1009,6 +1014,7 @@
 				3FFF851D16EA3AF400A6B620 /* gridLayer.m in Sources */,
 				3FFF852016EA3B8900A6B620 /* gameController.m in Sources */,
 				BC472D7616F22AE400229F10 /* Player.m in Sources */,
+				BC472D7916F35C4E00229F10 /* Globals.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1062,6 +1068,7 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_VERSION = "";
 				INFOPLIST_FILE = BattleShip/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				New_Setting = "";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-lz";
@@ -1081,6 +1088,7 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_VERSION = "";
 				INFOPLIST_FILE = BattleShip/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				New_Setting = "";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-lz";
