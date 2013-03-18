@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F07FB6316F4FFDF00D98361 /* ship.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F07FB6216F4FFDF00D98361 /* ship.m */; };
+		3F07FB6516F769FE00D98361 /* bship4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F07FB6416F769FE00D98361 /* bship4.jpg */; };
 		3FFF83A616EA39AE00A6B620 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFF83A516EA39AE00A6B620 /* QuartzCore.framework */; };
 		3FFF83A816EA39AE00A6B620 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFF83A716EA39AE00A6B620 /* OpenGLES.framework */; };
 		3FFF83AA16EA39AE00A6B620 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFF83A916EA39AE00A6B620 /* OpenAL.framework */; };
@@ -145,6 +147,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F07FB6116F4FFDE00D98361 /* ship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ship.h; path = ../ship.h; sourceTree = "<group>"; };
+		3F07FB6216F4FFDF00D98361 /* ship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ship.m; path = ../ship.m; sourceTree = "<group>"; };
+		3F07FB6416F769FE00D98361 /* bship4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bship4.jpg; sourceTree = "<group>"; };
 		3FFF83A216EA39AE00A6B620 /* BattleShip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BattleShip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FFF83A516EA39AE00A6B620 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3FFF83A716EA39AE00A6B620 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -468,8 +473,13 @@
 				3FFF850B16EA39B600A6B620 /* RootViewController.m */,
 				3FFF851B16EA3AF400A6B620 /* gridLayer.h */,
 				3FFF851C16EA3AF400A6B620 /* gridLayer.m */,
+<<<<<<< HEAD
 				BC472D7816F35C4E00229F10 /* Globals.m */,
 				BC472D7716F35C4E00229F10 /* Globals.h */,
+=======
+				3F07FB6116F4FFDE00D98361 /* ship.h */,
+				3F07FB6216F4FFDF00D98361 /* ship.m */,
+>>>>>>> d4755c0eb5115d257876de8346d545c679081b84
 				3FFF851E16EA3B8900A6B620 /* gameController.h */,
 				3FFF851F16EA3B8900A6B620 /* gameController.m */,
 				3FFF851816EA3A7A00A6B620 /* mainMenu.h */,
@@ -806,6 +816,7 @@
 				3FFF85F416EA474800A6B620 /* Carrier.png */,
 				3FFF85F516EA474800A6B620 /* CruiserShip.png */,
 				3FFF85F616EA474800A6B620 /* CruiserShip1.png */,
+				3F07FB6416F769FE00D98361 /* bship4.jpg */,
 				3FFF85F716EA474800A6B620 /* Default.png */,
 				3FFF85F816EA474800A6B620 /* Empire_of_the_Gun_015_sec_preview.mp3 */,
 				3FFF95C916EBADB400A6B620 /* shipcontainer.png */,
@@ -902,6 +913,7 @@
 				3FFF95C516EA474E00A6B620 /* tap-to-continue.png in Resources */,
 				3FFF95C616EA474E00A6B620 /* waves.jpg in Resources */,
 				3FFF95CA16EBADB400A6B620 /* shipcontainer.png in Resources */,
+				3F07FB6516F769FE00D98361 /* bship4.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1014,7 +1026,11 @@
 				3FFF851D16EA3AF400A6B620 /* gridLayer.m in Sources */,
 				3FFF852016EA3B8900A6B620 /* gameController.m in Sources */,
 				BC472D7616F22AE400229F10 /* Player.m in Sources */,
+<<<<<<< HEAD
 				BC472D7916F35C4E00229F10 /* Globals.m in Sources */,
+=======
+				3F07FB6316F4FFDF00D98361 /* ship.m in Sources */,
+>>>>>>> d4755c0eb5115d257876de8346d545c679081b84
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1036,7 +1052,7 @@
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1051,7 +1067,7 @@
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 			};

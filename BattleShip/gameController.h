@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-
-@interface gameController :CCLayer{
+#import "Player.h"
+@interface gameController :NSObject{
+    Player *playerOne, *playerTwo;
+    CCTMXTiledMap *tileMap;
+    CCTMXLayer *layerOne;
     
 }
 

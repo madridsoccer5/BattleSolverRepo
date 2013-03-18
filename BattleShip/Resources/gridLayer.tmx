@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="6" height="9" tilewidth="50" tileheight="50">
- <tileset firstgid="1" name="Ocean" tilewidth="50" tileheight="50">
+<map version="1.0" orientation="orthogonal" width="6" height="9" tilewidth="52" tileheight="52">
+ <tileset firstgid="1" name="Ocean" tilewidth="52" tileheight="52">
   <image source="waves.jpg" trans="ffffff" width="259" height="194"/>
  </tileset>
- <layer name="Texture" width="6" height="9">
+ <tileset firstgid="13" name="border-correct" tilewidth="52" tileheight="52">
+  <image source="../../../../../Downloads/border-correct.png" trans="ffffff" width="52" height="52"/>
+ </tileset>
+ <tileset firstgid="14" name="Yjh5F" tilewidth="52" tileheight="52">
+  <image source="../../../../../Downloads/Yjh5F.png" trans="ffffff" width="347" height="344"/>
+ </tileset>
+ <tileset firstgid="50" name="allTilesCont2" tilewidth="52" tileheight="52">
+  <image source="../../../../../Desktop/cocostest/cocostest/allTilesCont2.PNG" trans="ffffff" width="160" height="160"/>
+ </tileset>
+ <tileset firstgid="59" name="allTilesCont2" tilewidth="52" tileheight="52">
+  <image source="../../../../../Desktop/cocostest/cocostest/allTilesCont2.PNG" trans="ffffff" width="160" height="160"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="6" height="9">
   <data encoding="base64" compression="zlib">
-   eJxjZGBgYAJiZiBmAWJWKJ8NiNmBmAOIOYGYCyrGDcQ8QMwLFeeHspHF+aDiXGjiHEh6eJDEkc2iFgYA4UACcA==
+   eJxjZGBgYARiJiBmBmIWKGaFYjYgZgdiDijNCcVcQMwNxDxQjE+cGw3zIKlFxzxUwgC+tAII
   </data>
  </layer>
 </map>

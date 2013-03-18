@@ -55,7 +55,7 @@ int counter =0;
         
         //All Three Ships
         movableSprites = [[NSMutableArray alloc] init];
-        NSArray *images = [NSArray arrayWithObjects:@"CruiserShip.png", @"CruiserShip.png", @"Carrier.png", nil];
+        NSArray *images = [NSArray arrayWithObjects:@"Carrier.png", @"bship4.jpg", @"CruiserShip.png", nil];
         for(int i = 0; i < images.count; ++i) {
             NSString *image = [images objectAtIndex:i];
             CCSprite *sprite = [CCSprite spriteWithFile:image];
@@ -69,8 +69,8 @@ int counter =0;
         
         //Tile map test run?
         tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"gridLayer.tmx"];
-        CGPoint centerofScreen = CGPointMake(self.contentSizeInPixels.width/2, self.contentSizeInPixels.height/1.8);
-        tileMap.positionInPixels = CGPointMake(centerofScreen.x - (tileMap.contentSizeInPixels.width/2), centerofScreen.y - (tileMap.contentSizeInPixels.height/1.8));
+       // CGPoint centerofScreen = CGPointMake(self.contentSizeInPixels.width/2, self.contentSizeInPixels.height/1.8);
+        //tileMap.positionInPixels = CGPointMake(centerofScreen.x - (tileMap.contentSizeInPixels.width/2), centerofScreen.y - (tileMap.contentSizeInPixels.height/1.8));
         
         [self addChild: dispRect z:2];
         [self addChild: mainMenu z:3];
@@ -90,25 +90,25 @@ int counter =0;
 - (CGPoint) boundLayerPos:(CGPoint)newPos ofRect:(CGRect)tiledMap{
     NSLog(@"inBound is at %g, %g", newPos.x, newPos.y);
     //CGRect unionOf = CGRectUnion(window, selShip.sprite.boundingBox);
-    CGPoint retval = newPos;
+    CGPoint returnval = newPos;
     if (!CGRectContainsRect(tiledMap, selSprite.boundingBox) ||
         !CGRectContainsPoint(tiledMap, newPos)){ //outside of window
         if (selSprite.boundingBox.origin.x < tiledMap.origin.x) { //x is too low
-            retval.x = (selSprite) ? TILESIZE/2 : TILESIZE;
+            returnval.x = (selSprite) ? TILESIZE/2 : TILESIZE;
         }
         if (selSprite.boundingBox.origin.y < tiledMap.origin.y) { //y is too low
-            retval.y = (selSprite) ? TILESIZE : TILESIZE/2;
+            returnval.y = (selSprite) ? TILESIZE : TILESIZE/2;
         }
         if (selSprite.boundingBox.origin.x + selSprite.boundingBox.size.width > tiledMap.size.width) { //x is high
-            retval.x = (selSprite) ? tiledMap.size.width - TILESIZE/2 : tiledMap.size.width - TILESIZE;
+            returnval.x = (selSprite) ? tiledMap.size.width - TILESIZE/2 : tiledMap.size.width - TILESIZE;
         }
         if (selSprite.boundingBox.origin.y + selSprite.boundingBox.size.height > tiledMap.size.height) { //y is high
-            retval.y = (selSprite) ? tiledMap.size.height - TILESIZE : tiledMap.size.height - TILESIZE/2;
+            returnval.y = (selSprite) ? tiledMap.size.height - TILESIZE : tiledMap.size.height - TILESIZE/2;
         }
-        retval.x = abs(retval.x);
-        retval.y = abs(retval.y);
+        returnval.x = abs(returnval.x);
+        returnval.y = abs(returnval.y);
     }
-    return retval;
+    return returnval;
 }
 
 
