@@ -9,7 +9,7 @@
 #import "Player.h"
 #import "ship.h"
 
-@end
+
 @implementation Player
 
 -(id)PlayerInitWithName:(NSString *)playerName

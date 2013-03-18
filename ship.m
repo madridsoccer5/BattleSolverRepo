@@ -24,6 +24,7 @@
     self.placementOnTiles = [[NSMutableArray alloc] init];
     self.hitsTaken = 0;
     [self addChild:sprite];
+    //hello world
     
     return self;
 }
