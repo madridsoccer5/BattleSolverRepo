@@ -77,7 +77,7 @@
 
 - (id) initWithString:(NSString*)str dimensions:(CGSize)dimensions alignment:(CCTextAlignment)alignment fontName:(NSString*)name fontSize:(CGFloat)size
 {
-	return [self initWithString:str dimensions:dimensions alignment:alignment lineBreakMode:NSLineBreakByWordWrapping fontName:name fontSize:size];
+	return [self initWithString:str dimensions:dimensions alignment:alignment lineBreakMode:CCLineBreakModeWordWrap fontName:name fontSize:size];
 }
 
 - (id) initWithString:(NSString*)str fontName:(NSString*)name fontSize:(CGFloat)size

@@ -8,14 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "Globals.h"
-//#import "Player.h"
 
 @interface mainMenuLayer: CCLayer {
-    UITextField* myTextField1;
-    UITextField* myTextField2;
-    //Player *player1;
-    //Player *player2;
 }
 +(CCScene *) scene;
 

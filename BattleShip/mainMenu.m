@@ -14,7 +14,7 @@
 #import "CDAudioManager.h"
 #import "CocosDenshion.h"
 #import "CCAnimation.h"
-#import "Globals.h"
+#import "Player.h"
 
 int playerCount = 0;
 bool twoPlayers;
@@ -111,9 +111,16 @@ bool twoPlayers;
 //UIAlertview for one player.
 -(void)onePlayer:(id) sender{
     
-    //TESTING GLOBALS
-    /*NSString * testGlobals = [[Globals sharedGlobals] testMeth];
-    NSLog([Globals sharedGlobals].player1.getName,testGlobals);*/
+    //TESTING PLAYER CLASS
+    NSString *testName = @"Michael";
+    NSInteger *testInt = 10;
+    Player *testPlayer = [[Player alloc] PlayerInitWithName:testName];
+    [testPlayer setScore:testInt];
+    NSString *testString = testPlayer.getName;
+    //NSInteger *testSetters = testPlayer.getScore;
+    //  NSString *testSetters = [NSString stringWithFormat:@"%d", 12/*testPlayer.getScore*/];
+    NSLog(testString);
+
     
     playerCount = 1;
     UIAlertView *playerOne = [[UIAlertView alloc] init];
@@ -122,12 +129,10 @@ bool twoPlayers;
 	[playerOne setDelegate:self];
 	[playerOne addButtonWithTitle:@"Cancel"];
 	[playerOne addButtonWithTitle:@"Confirm"];
-    myTextField1 = [[UITextField alloc] initWithFrame: CGRectMake(12.0, 45.0, 260.0, 25.0)];
-    [myTextField1 setBackgroundColor: [UIColor whiteColor]];
-    [playerOne addSubview:myTextField1];
-    [playerOne show];
-   
-   	   
+    UITextField* myTextField = [[UITextField alloc] initWithFrame: CGRectMake(12.0, 45.0, 260.0, 25.0)];
+    [myTextField setBackgroundColor: [UIColor whiteColor]];
+    [playerOne addSubview:myTextField];
+	[playerOne show];
 	[playerOne release];
     
 
@@ -146,27 +151,12 @@ bool twoPlayers;
     {
         //if player count is one player
         if (playerCount == 1) {
-            
-           NSString *player1Name = [myTextField1 text];
-           // player1 = [[Player alloc] PlayerInitWithName:player1Name];
-           // NSLog(player1.getName);
-            [Globals sharedGlobals].player1.name = player1Name;
-            NSLog([Globals sharedGlobals].player1.getName);
-            
             [[CCDirector sharedDirector]replaceScene:[CCTransitionFlipX transitionWithDuration:1 scene:[gridLayer scene]]];
             
         }
         //if player count is two player
         else if (playerCount == 2){
-          
-            //setting global player2 name to text from input box
-            NSString *player2Name = [myTextField2 text];
-            [Globals sharedGlobals].player2.name = player2Name;
-            //nslog print out of name
-            NSLog([Globals sharedGlobals].player2.getName);
-            
-  //$$$$$$$ HERE  // [self performSelector:@selector(onePlayer:)];
-            [self onePlayer:<#(id)#>];
+             [self performSelector:@selector(onePlayer:)];
             
         }
     }
@@ -181,9 +171,9 @@ bool twoPlayers;
 	[playerOne setDelegate:self];
 	[playerOne addButtonWithTitle:@"Cancel"];
 	[playerOne addButtonWithTitle:@"Confirm"];
-    myTextField2 = [[UITextField alloc] initWithFrame: CGRectMake(12.0, 45.0, 260.0, 25.0)];
-    [myTextField2 setBackgroundColor: [UIColor whiteColor]];
-    [playerOne addSubview:myTextField2];
+    UITextField* myTextField = [[UITextField alloc] initWithFrame: CGRectMake(12.0, 45.0, 260.0, 25.0)];
+    [myTextField setBackgroundColor: [UIColor whiteColor]];
+    [playerOne addSubview:myTextField];
 	[playerOne show];
 	[playerOne release];
 

@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "Globals.h"
 
 @interface gridLayer : CCLayer {
     CCTMXTiledMap *tileMap;
@@ -19,5 +18,5 @@
     CGPoint oldPos;
 }
 +(CCScene *) scene;
-//@property CGPoint oldPos;
+@property CGPoint oldPos;
 @end
