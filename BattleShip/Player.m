@@ -7,7 +7,9 @@
 //
 
 #import "Player.h"
+#import "ship.h"
 
+@end
 @implementation Player
 
 -(id)PlayerInitWithName:(NSString *)playerName
@@ -32,38 +34,47 @@
     }
     return self;
 }
+//set the name of the player
 -(void)setName:(NSString *)playerName
 {
     name = playerName;
 }
+//sets the score of the game
 -(void)setScore:(NSInteger *)playerScore
 {
     score = playerScore;
 }
+//set the number that are correct
 -(void)setNumCorr:(NSInteger *)playerNumCorr
 {
     numCorr = playerNumCorr;
 }
+//set the number incorrect
 -(void)setNumIncorr:(NSInteger *)playerNumIncorr
 {
     numIncorr = playerNumIncorr;
 }
+//get the name of the player
 -(NSString*)getName
 {
     return name;
 }
+//gets score of the game
 -(NSInteger*)getScore
 {
     return score;
 }
+//get the number correct
 -(NSInteger*)getNumCorr
 {
     return numCorr;
 }
+//get the number incorrect
 -(NSInteger*)getNumIncorr
 {
     return numIncorr;
 }
+//reset all of the attributes of Player
 -(void)resetAll;
 {
     name = NULL;

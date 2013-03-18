@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
+
 @interface Player : NSObject
 {
     NSString *name;
@@ -38,6 +39,7 @@
 -(void)resetScore;
 -(void)resetNumCorr;
 -(void)resetAllButName;
+
 
 
 @end
