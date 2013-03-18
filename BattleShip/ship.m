@@ -7,6 +7,7 @@
 //
 
 #import "ship.h"
+#import "Globals.h"
 
 @implementation ship
 

@@ -8,9 +8,8 @@
 
 #import "gridLayer.h"
 #import "mainMenu.h"
-extern const int TILESIZE;
-extern const int MAXWIDTH;
-extern const int MAXHEIGHT;
+#import "Globals.h"
+
 float offsetFraction=0;
 int counter =0;
 

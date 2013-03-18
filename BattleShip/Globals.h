@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "Player.h"
+extern const int TILESIZE;
+extern const int MAXWIDTH;
+extern const int MAXHEIGHT;
 
 @interface Globals : NSObject
 {

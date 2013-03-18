@@ -9,10 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "Player.h"
+#import "Globals.h"
 @interface gameController :NSObject{
-    Player *playerOne, *playerTwo;
-    CCTMXTiledMap *tileMap;
-    CCTMXLayer *layerOne;
+
     
 }
 

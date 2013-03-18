@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F07FB6316F4FFDF00D98361 /* ship.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F07FB6216F4FFDF00D98361 /* ship.m */; };
 		3F07FB6516F769FE00D98361 /* bship4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F07FB6416F769FE00D98361 /* bship4.jpg */; };
+		3F56602416F788C9007AC117 /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F56602316F788C9007AC117 /* Globals.m */; };
+		3FAC91A016F7B8ED002F1175 /* ship.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC919F16F7B8ED002F1175 /* ship.m */; };
 		3FFF83A616EA39AE00A6B620 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFF83A516EA39AE00A6B620 /* QuartzCore.framework */; };
 		3FFF83A816EA39AE00A6B620 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFF83A716EA39AE00A6B620 /* OpenGLES.framework */; };
 		3FFF83AA16EA39AE00A6B620 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFF83A916EA39AE00A6B620 /* OpenAL.framework */; };
@@ -146,9 +147,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F07FB6116F4FFDE00D98361 /* ship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ship.h; path = ../ship.h; sourceTree = "<group>"; };
-		3F07FB6216F4FFDF00D98361 /* ship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ship.m; path = ../ship.m; sourceTree = "<group>"; };
 		3F07FB6416F769FE00D98361 /* bship4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bship4.jpg; sourceTree = "<group>"; };
+		3F56602216F788C9007AC117 /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
+		3F56602316F788C9007AC117 /* Globals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Globals.m; sourceTree = "<group>"; };
+		3FAC919F16F7B8ED002F1175 /* ship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ship.m; sourceTree = "<group>"; };
+		3FAC91A116F7B8FB002F1175 /* ship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ship.h; sourceTree = "<group>"; };
 		3FFF83A216EA39AE00A6B620 /* BattleShip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BattleShip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FFF83A516EA39AE00A6B620 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3FFF83A716EA39AE00A6B620 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -470,8 +473,10 @@
 				3FFF850B16EA39B600A6B620 /* RootViewController.m */,
 				3FFF851B16EA3AF400A6B620 /* gridLayer.h */,
 				3FFF851C16EA3AF400A6B620 /* gridLayer.m */,
-				3F07FB6116F4FFDE00D98361 /* ship.h */,
-				3F07FB6216F4FFDF00D98361 /* ship.m */,
+				3FAC91A116F7B8FB002F1175 /* ship.h */,
+				3FAC919F16F7B8ED002F1175 /* ship.m */,
+				3F56602216F788C9007AC117 /* Globals.h */,
+				3F56602316F788C9007AC117 /* Globals.m */,
 				3FFF851E16EA3B8900A6B620 /* gameController.h */,
 				3FFF851F16EA3B8900A6B620 /* gameController.m */,
 				3FFF851816EA3A7A00A6B620 /* mainMenu.h */,
@@ -1018,7 +1023,8 @@
 				3FFF851D16EA3AF400A6B620 /* gridLayer.m in Sources */,
 				3FFF852016EA3B8900A6B620 /* gameController.m in Sources */,
 				BC472D7616F22AE400229F10 /* Player.m in Sources */,
-				3F07FB6316F4FFDF00D98361 /* ship.m in Sources */,
+				3F56602416F788C9007AC117 /* Globals.m in Sources */,
+				3FAC91A016F7B8ED002F1175 /* ship.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

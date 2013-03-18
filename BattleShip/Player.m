@@ -7,10 +7,11 @@
 //
 
 #import "Player.h"
-#import "ship.h"
+#import "Globals.h"
 
 
 @implementation Player
+@synthesize selectedShip;
 
 -(id)PlayerInitWithName:(NSString *)playerName
 {
@@ -20,7 +21,23 @@
         score = 0;
         numCorr = 0;
         numIncorr = 0;
+        self.selectedShip = [[ship alloc] init];
+        NSArray *images = [NSArray arrayWithObjects:@"bship4.jpg", @"bship4.jpg", @"bship4.jpg", nil];
+        int counter = 0;
+        for (NSString *image in images){
+            ship *ship = [[[ship alloc] initWithFile:image] autorelease];
+            float x = ship.sprite.boundingBox.size.width / 2;
+            float y = TILESIZE * counter + (ship.sprite.boundingBox.size.height / 2);
+            CGPoint useTwice = ccp((int)x, (int)y);
+            ship.sprite.position = useTwice;
+            ship.startingPosition = useTwice;
+            ship.shipIdentifier = counter + 1;
+            [allShips addObject:ship];
+            //[ship release];
+            counter++;
+        }
     }
+    
     return self;
 }
 
@@ -77,6 +94,7 @@
 //reset all of the attributes of Player
 -(void)resetAll;
 {
+    [allShips removeAllObjects];
     name = NULL;
     score = 0;
     numCorr = 0;

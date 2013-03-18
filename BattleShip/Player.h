@@ -8,16 +8,21 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "ship.h"
+
 
 
 @interface Player : NSObject
 {
+    ship *selectedShip;
     NSString *name;
     NSInteger *score;
     NSInteger *numCorr;
     NSInteger *numIncorr;
     Boolean *shipSunk;
+    NSMutableArray *allShips;
 }
+@property (retain) ship *selectedShip;
 /*
 @property NSString *name;
 @property NSInteger *score;
