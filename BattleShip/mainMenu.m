@@ -130,9 +130,9 @@ bool twoPlayers;
 	[playerOne setDelegate:self];
 	[playerOne addButtonWithTitle:@"Cancel"];
 	[playerOne addButtonWithTitle:@"Confirm"];
-    UITextField* myTextField = [[UITextField alloc] initWithFrame: CGRectMake(12.0, 45.0, 260.0, 25.0)];
-    [myTextField setBackgroundColor: [UIColor whiteColor]];
-    [playerOne addSubview:myTextField];
+    myTextFieldPlayerOne = [[UITextField alloc] initWithFrame: CGRectMake(12.0, 45.0, 260.0, 25.0)];
+    [myTextFieldPlayerOne setBackgroundColor: [UIColor whiteColor]];
+    [playerOne addSubview:myTextFieldPlayerOne];
 	[playerOne show];
 	[playerOne release];
     
@@ -142,6 +142,23 @@ bool twoPlayers;
 //This method creates an action for the UIAlert View. If button one "Cancel" is pressed
 //nothing happens. If button two "Confirm" is pressed then add name to player one and go to
 //placement layer.
+//UiAlertview for two player
+-(void)twoPlayer:(id) sender{
+    playerCount =2;
+    UIAlertView *playerOne = [[UIAlertView alloc] init];
+	[playerOne setTitle:@"Player Two"];
+	[playerOne setMessage:@"Player two"];
+	[playerOne setDelegate:self];
+	[playerOne addButtonWithTitle:@"Cancel"];
+	[playerOne addButtonWithTitle:@"Confirm"];
+    myTextFieldPlayerTwo = [[UITextField alloc] initWithFrame: CGRectMake(12.0, 45.0, 260.0, 25.0)];
+    [myTextFieldPlayerTwo setBackgroundColor: [UIColor whiteColor]];
+    [playerOne addSubview:myTextFieldPlayerTwo];
+	[playerOne show];
+	[playerOne release];
+
+}
+
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 0)
@@ -164,22 +181,6 @@ bool twoPlayers;
             
         }
     }
-
-}
-//UiAlertview for two player
--(void)twoPlayer:(id) sender{
-    playerCount =2;
-    UIAlertView *playerOne = [[UIAlertView alloc] init];
-	[playerOne setTitle:@"Player Two"];
-	[playerOne setMessage:@"Player two"];
-	[playerOne setDelegate:self];
-	[playerOne addButtonWithTitle:@"Cancel"];
-	[playerOne addButtonWithTitle:@"Confirm"];
-    UITextField* myTextField = [[UITextField alloc] initWithFrame: CGRectMake(12.0, 45.0, 260.0, 25.0)];
-    [myTextField setBackgroundColor: [UIColor whiteColor]];
-    [playerOne addSubview:myTextField];
-	[playerOne show];
-	[playerOne release];
 
 }
 

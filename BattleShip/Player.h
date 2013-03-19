@@ -37,6 +37,7 @@
 -(void)setScore:(NSInteger *)playerScore;
 -(void)setNumCorr:(NSInteger *)playerNumCorr;
 -(void)setNumIncorr:(NSInteger *)playerNumIncorr;
+-(void)setName:(NSString *)playerName;
 -(NSString*)getName;
 -(NSInteger*)getScore;
 -(NSInteger*)getNumCorr;

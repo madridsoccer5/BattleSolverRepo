@@ -13,6 +13,8 @@
 
 @interface mainMenuLayer: CCLayer {
     Player *player1;
+    UITextField *myTextFieldPlayerOne, *myTextFieldPlayerTwo;
+    
 }
 +(CCScene *) scene;
 
