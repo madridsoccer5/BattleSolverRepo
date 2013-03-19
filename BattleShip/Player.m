@@ -17,33 +17,56 @@
 {
     if( (self=[super init]))
     {
-        
+                
         [self setName:playerName];
         score = 0;
         numCorr = 0;
         numIncorr = 0;
-        self.selectedShip = [[ship alloc] init];
-        NSArray *images = [NSArray arrayWithObjects:@"bship4.jpg", @"bship4.jpg", @"bship4.jpg", nil];
-        int counter = 0;
-        for (NSString *image in images){
-            ship *ships = [[ship alloc] initWithFile:image];
-            float x = ships.sprite.boundingBox.size.width / 2;
-            float y = TILESIZE * counter + (ships.sprite.boundingBox.size.height / 2);
-            CGPoint useTwice = ccp((int)x, (int)y);
-            ships.sprite.position = useTwice;
-            ships.startingPosition = useTwice;
-            ships.shipIdentifier = counter + 1;
-            [allShips addObject:ships];
-            //[ship release];
-            counter++;
-            NSLog(@"We finally got to the ship placing in the player arrays");
-        }
+       
+    }
+    
+    return self;
+}
+-(id)init
+{
+    if (self = [super init])
+    {
         score = 0;
         numCorr = 0;
         numIncorr = 0;
     }
-    
     return self;
+}
+
+//add ships to player
+-(void)runShips
+{
+    self.selectedShip = [[ship alloc] init];
+    NSArray *images = [NSArray arrayWithObjects:@"bship4.jpg", @"bship4.jpg", @"bship4.jpg", nil];
+    int counter = 0;
+    
+    //INITIALIZE allShips
+    allShips = [[NSMutableArray alloc] init];
+    //adding nil
+    //[allShips addObject:nil];
+    
+    
+    for (NSString *image in images){
+        ship *ships = [[ship alloc] initWithFile:image];
+        float x = ships.sprite.boundingBox.size.width / 2;
+        float y = TILESIZE * counter + (ships.sprite.boundingBox.size.height / 2);
+        CGPoint useTwice = ccp((int)x, (int)y);
+        ships.sprite.position = useTwice;
+        ships.startingPosition = useTwice;
+        ships.shipIdentifier = counter + 1;
+        [allShips addObject:ships];
+        //[ship release];
+        counter++;
+        NSLog(@"We finally got to the ship placing in the player arrays");
+    }
+    score = 0;
+    numCorr = 0;
+    numIncorr = 0;
 }
 
 //set the name of the player

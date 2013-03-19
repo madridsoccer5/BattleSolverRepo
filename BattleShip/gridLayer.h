@@ -18,6 +18,6 @@
     NSMutableArray * movableSprites;
     CGPoint oldPos;
 }
-+(CCScene *) sceneWithPlayer:(Player*)Player;
++(CCScene *) sceneWithPlayer/*:(Player*)Player*/;
 @property CGPoint oldPos;
 @end

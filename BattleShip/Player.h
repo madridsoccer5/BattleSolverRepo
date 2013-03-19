@@ -33,6 +33,7 @@
 
 -(id)PlayerInit;
 -(id)PlayerInitWithName:(NSString *)playerName;
+-(void)runShips;
 -(void)setName:(NSString *)playerName;
 -(void)setScore:(NSInteger *)playerScore;
 -(void)setNumCorr:(NSInteger *)playerNumCorr;

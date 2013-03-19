@@ -14,7 +14,7 @@
 #import "CDAudioManager.h"
 #import "CocosDenshion.h"
 #import "CCAnimation.h"
-#import "Player.h"
+//#import "Player.h"
 #import "Globals.h"
 
 int playerCount = 0;
@@ -112,17 +112,7 @@ bool twoPlayers;
 //UIAlertview for one player.
 -(void)onePlayer:(id) sender{
     
-    //TESTING PLAYER CLASS
-    NSString *testName = @"Michael";
-    NSInteger *testInt = 10;
-    Player *testPlayer = [[Player alloc] PlayerInitWithName:testName];
-    [testPlayer setScore:testInt];
-    NSString *testString = testPlayer.getName;
-    //NSInteger *testSetters = testPlayer.getScore;
-    //  NSString *testSetters = [NSString stringWithFormat:@"%d", 12/*testPlayer.getScore*/];
-    NSLog(testString);
-
-    
+     
     playerCount = 1;
     UIAlertView *playerOne = [[UIAlertView alloc] init];
 	[playerOne setTitle:@"Player One"];
@@ -169,8 +159,19 @@ bool twoPlayers;
     {
         //if player count is one player
         if (playerCount == 1) {
+           
+            //ADDING PLAYER
+            NSString *player1Name = [myTextFieldPlayerOne text];
+                      // player1 = [[Player alloc] PlayerInitWithName:player1Name];
+                       // NSLog(player1.getName);
+            [[Globals sharedGlobals].player1 runShips];
+            [[Globals sharedGlobals].player1 setName:player1Name];
+             
+           // [Globals sharedGlobals].player1.name = player1Name;
+            NSLog([Globals sharedGlobals].player1.getName);
+            
             CCScene *scene;
-            scene = [gridLayer sceneWithPlayer:player1];
+            scene = [gridLayer sceneWithPlayer/*:[Globals sharedGlobals].player1*/];
             [[CCDirector sharedDirector]replaceScene:[CCTransitionFlipX transitionWithDuration:1 scene:scene]];
 
 

@@ -24,7 +24,7 @@
     self.rotated = NO;
     self.placementOnTiles = [[NSMutableArray alloc] init];
     self.hitsTaken = 0;
-    [self addChild:sprite];
+    //[self addChild:sprite];
     
     return self;
 }

@@ -12,7 +12,7 @@
 #import "Globals.h"
 
 @interface mainMenuLayer: CCLayer {
-    Player *player1;
+    //Player *player1;
     UITextField *myTextFieldPlayerOne, *myTextFieldPlayerTwo;
     
 }

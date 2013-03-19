@@ -16,13 +16,13 @@ int counter =0;
 
 @implementation gridLayer
 
-+(CCScene *) sceneWithPlayer:(Player*)Player
++(CCScene *) sceneWithPlayer/*:(Player*)Player*/
 {
 	// 'scene' is an autorelease object.
 	CCScene *scene = [CCScene node];
 	
 	// 'layer' is an autorelease object.
-	gridLayer *layer= [gridLayer nodeWithPlayer:Player];
+	gridLayer *layer= [gridLayer nodeWithPlayer/*:Player*/];
 	
 	// add layer as a child to scene
 	[scene addChild: layer];
@@ -31,11 +31,11 @@ int counter =0;
 	return scene;
 }
 
-+ (id) nodeWithPlayer:(Player*)Player{
-    return [[[self alloc] initWithPlayer:Player] autorelease];
++ (id) nodeWithPlayer/*:(Player*)Player*/{
+    return [[[self alloc] initWithPlayer/*:Player*/] autorelease];
 }
 
--(id) initWithPlayer:(Player*)Player {
+-(id) initWithPlayer/*:(Player*)Player*/ {
     
     if( (self=[super init])) {
         
@@ -75,13 +75,16 @@ int counter =0;
         tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"gridLayer.tmx"];
 
         NSLog(@"in gridlayer");
+      
+        NSLog(@"%d",[Globals sharedGlobals].player1.allShips.count);
         
-        //fix this michael
-        for (ship *ships in Player.allShips){
+        
+        //prints out the ships
+        for (ship *selShip in [Globals sharedGlobals].player1.allShips){
             NSLog(@"Trying to Print in Gridlayer");
-            [self addChild: ships.sprite z:4];
-        }
-        
+            [self addChild: selShip.sprite z:4];
+        } 
+                
         [self addChild: dispRect z:2];
         [self addChild: mainMenu z:3];
         [self addChild: tileMap z:1];
