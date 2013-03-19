@@ -9,7 +9,7 @@
 #import "gridLayer.h"
 #import "mainMenu.h"
 #import "Globals.h"
-#import "ship.h"
+
 
 float offsetFraction=0;
 int counter =0;
@@ -73,10 +73,12 @@ int counter =0;
         
         //Tile map test run?
         tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"gridLayer.tmx"];
-       // CGPoint centerofScreen = CGPointMake(self.contentSizeInPixels.width/2, self.contentSizeInPixels.height/1.8);
-        //tileMap.positionInPixels = CGPointMake(centerofScreen.x - (tileMap.contentSizeInPixels.width/2), centerofScreen.y - (tileMap.contentSizeInPixels.height/1.8));
+
+        NSLog(@"in gridlayer");
         
+        //fix this michael
         for (ship *ships in Player.allShips){
+            NSLog(@"Trying to Print in Gridlayer");
             [self addChild: ships.sprite z:4];
         }
         
@@ -87,7 +89,6 @@ int counter =0;
         [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
         
     }
-
 	return self;
     
 }
