@@ -15,6 +15,7 @@
 @synthesize player2;
 static Globals *sharedGlobals = nil;
 
+//globals controller -> access globals through this method
 +(Globals *)sharedGlobals
 {
     if(sharedGlobals == nil)
@@ -29,6 +30,7 @@ static Globals *sharedGlobals = nil;
     return sharedGlobals;
 }
 
+//for testing only, add more if wanted/necessary
 -(NSString*)testMeth
 {
     [player1 setName:@"testName"];

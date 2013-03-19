@@ -74,10 +74,12 @@ int counter =0;
         //Tile map test run?
         tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"gridLayer.tmx"];
 
+        //log prints of different statuses
         NSLog(@"in gridlayer");
       
         NSLog(@"%d",[Globals sharedGlobals].player1.allShips.count);
         
+        //init sprite array
         movableSprites = [[NSMutableArray alloc] init];
         
         //prints out the ships, adds sprites to movable sprites
@@ -88,7 +90,7 @@ int counter =0;
         }
         NSLog(@"%d", movableSprites.count);
         
-        //adding "player1 is placing" message on grid with some opacity
+        //ADDING "player1 is placing" message on grid with some opacity
         NSMutableString *player1String = [Globals sharedGlobals].player1.getName;
         [player1String appendString:@" is Placing"];
         CCMenuItemFont *player1Message = [CCMenuItemFont itemFromString: player1String target:self selector:NULL];
