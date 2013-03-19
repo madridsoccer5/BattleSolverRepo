@@ -83,8 +83,19 @@ int counter =0;
         for (ship *selShip in [Globals sharedGlobals].player1.allShips){
             NSLog(@"Trying to Print in Gridlayer");
             [self addChild: selShip.sprite z:4];
-        } 
-                
+        }
+        
+        //adding "player1 is placing" message on grid with some opacity
+        NSMutableString *player1String = [Globals sharedGlobals].player1.getName;
+        [player1String appendString:@" is Placing"];
+        CCMenuItemFont *player1Message = [CCMenuItemFont itemFromString: player1String target:self selector:NULL];
+        [player1Message setFontName:@"American Typewriter"];
+        [player1Message setFontSize:32];
+        CCMenu *placingMessage = [CCMenu menuWithItems:player1Message, nil];
+        placingMessage.position = CGPointMake(size.width/2, 2 * (size.height/5));
+        placingMessage.opacity = 100;
+        
+        [self addChild: placingMessage z:4];
         [self addChild: dispRect z:2];
         [self addChild: mainMenu z:3];
         [self addChild: tileMap z:1];
