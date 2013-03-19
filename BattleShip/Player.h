@@ -15,7 +15,7 @@
 @interface Player : NSObject
 {
     ship *selectedShip;
-    NSString *name;
+    NSMutableString *name;
     NSInteger *score;
     NSInteger *numCorr;
     NSInteger *numIncorr;
@@ -39,7 +39,7 @@
 -(void)setNumCorr:(NSInteger *)playerNumCorr;
 -(void)setNumIncorr:(NSInteger *)playerNumIncorr;
 -(void)setName:(NSString *)playerName;
--(NSString*)getName;
+-(NSMutableString*)getName;
 -(NSInteger*)getScore;
 -(NSInteger*)getNumCorr;
 -(NSInteger*)getNumIncorr;

@@ -78,12 +78,15 @@ int counter =0;
       
         NSLog(@"%d",[Globals sharedGlobals].player1.allShips.count);
         
+        movableSprites = [[NSMutableArray alloc] init];
         
-        //prints out the ships
+        //prints out the ships, adds sprites to movable sprites
         for (ship *selShip in [Globals sharedGlobals].player1.allShips){
             NSLog(@"Trying to Print in Gridlayer");
+            [movableSprites addObject:selShip.sprite];
             [self addChild: selShip.sprite z:4];
         }
+        NSLog(@"%d", movableSprites.count);
         
         //adding "player1 is placing" message on grid with some opacity
         NSMutableString *player1String = [Globals sharedGlobals].player1.getName;
@@ -94,6 +97,7 @@ int counter =0;
         CCMenu *placingMessage = [CCMenu menuWithItems:player1Message, nil];
         placingMessage.position = CGPointMake(size.width/2, 2 * (size.height/5));
         placingMessage.opacity = 100;
+        //placingMessage.color = [CIColor];
         
         [self addChild: placingMessage z:4];
         [self addChild: dispRect z:2];

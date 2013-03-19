@@ -70,7 +70,7 @@
 }
 
 //set the name of the player
--(void)setName:(NSString *)playerName
+-(void)setName:(NSMutableString *)playerName
 {
     name = playerName;
 }
@@ -90,7 +90,7 @@
     numIncorr = playerNumIncorr;
 }
 //get the name of the player
--(NSString*)getName
+-(NSMutableString*)getName
 {
     return name;
 }
