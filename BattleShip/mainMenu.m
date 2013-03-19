@@ -15,6 +15,7 @@
 #import "CocosDenshion.h"
 #import "CCAnimation.h"
 #import "Player.h"
+#import "Globals.h"
 
 int playerCount = 0;
 bool twoPlayers;
@@ -151,8 +152,11 @@ bool twoPlayers;
     {
         //if player count is one player
         if (playerCount == 1) {
-            [[CCDirector sharedDirector]replaceScene:[CCTransitionFlipX transitionWithDuration:1 scene:[gridLayer scene]]];
-            
+            CCScene *scene;
+            scene = [gridLayer sceneWithPlayer:player1];
+            [[CCDirector sharedDirector]replaceScene:[CCTransitionFlipX transitionWithDuration:1 scene:scene]];
+
+
         }
         //if player count is two player
         else if (playerCount == 2){

@@ -9,28 +9,33 @@
 #import "gridLayer.h"
 #import "mainMenu.h"
 #import "Globals.h"
+#import "ship.h"
 
 float offsetFraction=0;
 int counter =0;
 
 @implementation gridLayer
 
-+(CCScene *) scene
++(CCScene *) sceneWithPlayer:(Player*)Player
 {
 	// 'scene' is an autorelease object.
 	CCScene *scene = [CCScene node];
 	
 	// 'layer' is an autorelease object.
-	gridLayer *layer3= [gridLayer node];
+	gridLayer *layer= [gridLayer nodeWithPlayer:Player];
 	
 	// add layer as a child to scene
-	[scene addChild: layer3];
+	[scene addChild: layer];
 	
 	// return the scene
 	return scene;
 }
 
--(id) init{
++ (id) nodeWithPlayer:(Player*)Player{
+    return [[[self alloc] initWithPlayer:Player] autorelease];
+}
+
+-(id) initWithPlayer:(Player*)Player {
     
     if( (self=[super init])) {
         
@@ -52,6 +57,7 @@ int counter =0;
         dispRect.position = CGPointMake(size.width/2, size.height/5);
         
         //All Three Ships
+        /*
         movableSprites = [[NSMutableArray alloc] init];
         NSArray *images = [NSArray arrayWithObjects:@"Carrier.png", @"bship4.jpg", @"CruiserShip.png", nil];
         for(int i = 0; i < images.count; ++i) {
@@ -63,12 +69,16 @@ int counter =0;
             [movableSprites addObject:sprite];
             counter++;
         }
-        
+        */
         
         //Tile map test run?
         tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"gridLayer.tmx"];
        // CGPoint centerofScreen = CGPointMake(self.contentSizeInPixels.width/2, self.contentSizeInPixels.height/1.8);
         //tileMap.positionInPixels = CGPointMake(centerofScreen.x - (tileMap.contentSizeInPixels.width/2), centerofScreen.y - (tileMap.contentSizeInPixels.height/1.8));
+        
+        for (ship *ships in Player.allShips){
+            [self addChild: ships.sprite z:4];
+        }
         
         [self addChild: dispRect z:2];
         [self addChild: mainMenu z:3];

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "Player.h"
 
 @interface gridLayer : CCLayer {
     CCTMXTiledMap *tileMap;
@@ -17,6 +18,6 @@
     NSMutableArray * movableSprites;
     CGPoint oldPos;
 }
-+(CCScene *) scene;
++(CCScene *) sceneWithPlayer:(Player*)Player;
 @property CGPoint oldPos;
 @end

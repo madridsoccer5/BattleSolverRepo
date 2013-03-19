@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "Player.h"
+#import "Globals.h"
 
 @interface mainMenuLayer: CCLayer {
+    Player *player1;
 }
 +(CCScene *) scene;
 

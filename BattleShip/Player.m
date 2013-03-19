@@ -11,12 +11,13 @@
 
 
 @implementation Player
-@synthesize selectedShip;
+@synthesize selectedShip, allShips;
 
 -(id)PlayerInitWithName:(NSString *)playerName
 {
     if( (self=[super init]))
-    {        
+    {
+        
         [self setName:playerName];
         score = 0;
         numCorr = 0;
@@ -25,32 +26,26 @@
         NSArray *images = [NSArray arrayWithObjects:@"bship4.jpg", @"bship4.jpg", @"bship4.jpg", nil];
         int counter = 0;
         for (NSString *image in images){
-            ship *ship = [[[ship alloc] initWithFile:image] autorelease];
-            float x = ship.sprite.boundingBox.size.width / 2;
-            float y = TILESIZE * counter + (ship.sprite.boundingBox.size.height / 2);
+            ship *ships = [[ship alloc] initWithFile:image];
+            float x = ships.sprite.boundingBox.size.width / 2;
+            float y = TILESIZE * counter + (ships.sprite.boundingBox.size.height / 2);
             CGPoint useTwice = ccp((int)x, (int)y);
-            ship.sprite.position = useTwice;
-            ship.startingPosition = useTwice;
-            ship.shipIdentifier = counter + 1;
-            [allShips addObject:ship];
+            ships.sprite.position = useTwice;
+            ships.startingPosition = useTwice;
+            ships.shipIdentifier = counter + 1;
+            [allShips addObject:ships];
             //[ship release];
             counter++;
+            NSLog(@"We finally got to the ship placing in the player arrays");
         }
+        score = 0;
+        numCorr = 0;
+        numIncorr = 0;
     }
     
     return self;
 }
 
--(id)PlayerInit
-{
-    if( (self=[super init]))
-    {
-        score = 0;
-        numCorr = 0;
-        numIncorr = 0;
-    }
-    return self;
-}
 //set the name of the player
 -(void)setName:(NSString *)playerName
 {

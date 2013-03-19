@@ -23,6 +23,7 @@
     NSMutableArray *allShips;
 }
 @property (retain) ship *selectedShip;
+@property (nonatomic, retain) NSMutableArray* allShips;
 /*
 @property NSString *name;
 @property NSInteger *score;
