@@ -162,12 +162,9 @@ bool twoPlayers;
            
             //ADDING PLAYER
             NSString *player1Name = [myTextFieldPlayerOne text];
-                      // player1 = [[Player alloc] PlayerInitWithName:player1Name];
-                       // NSLog(player1.getName);
             [[Globals sharedGlobals].player1 runShips];
             [[Globals sharedGlobals].player1 setName:player1Name];
              
-           // [Globals sharedGlobals].player1.name = player1Name;
             NSLog([Globals sharedGlobals].player1.getName);
             
             CCScene *scene;
@@ -178,6 +175,14 @@ bool twoPlayers;
         }
         //if player count is two player
         else if (playerCount == 2){
+            
+            //ADDING PLAYER
+            NSString *player2Name = [myTextFieldPlayerOne text];
+            [[Globals sharedGlobals].player2 runShips];
+            [[Globals sharedGlobals].player2 setName:player2Name];
+            
+             NSLog([Globals sharedGlobals].player1.getName);
+            
              [self performSelector:@selector(onePlayer:)];
             
         }
