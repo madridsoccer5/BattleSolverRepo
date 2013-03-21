@@ -183,6 +183,7 @@ bool twoPlayers;
             
              NSLog([Globals sharedGlobals].player1.getName);
             
+            //send to player one
              [self performSelector:@selector(onePlayer:)];
             
         }
