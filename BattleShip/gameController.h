@@ -10,6 +10,7 @@
 #import "cocos2d.h"
 #import "Player.h"
 #import "Globals.h"
+#import "gridLayer.h"
 @interface gameController :NSObject{
     int placementCounter;
     int turns;

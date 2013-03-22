@@ -19,6 +19,7 @@
     @synchronized(self){
         if (!instance){
             instance = [[gameController alloc] init];
+            NSLog(@"in getInstance");
             instance.tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"gridLayer.tmx"];
             instance.layerOne = [instance.tileMap layerNamed:@"Tile Layer 1"];
          //   instance.player = [Player initWithName:@"Player 1" andLayer:instance.layerOne];
@@ -28,6 +29,17 @@
             instance.placementCounter = 0; instance.turns = 0;
         }
         return instance;
+    }
+}
+
+-(void)handleGame
+{
+    CCScene *scene;
+    switch(placementCounter)
+    {
+        case 0: //player1 places
+            scene = [gridLayer sceneWithPlayer];
+            NSLog([Globals sharedGlobals].player1.getName);
     }
 }
 

@@ -15,6 +15,7 @@ float offsetFraction=0;
 int counter =0;
 
 @implementation gridLayer
+@synthesize instance;
 
 +(CCScene *) sceneWithPlayer/*:(Player*)Player*/
 {
@@ -39,11 +40,13 @@ int counter =0;
     
     if( (self=[super init])) {
         
+        instance = [gameController getInstance];
+        
         //Getting size of screen
         CGSize size = [[CCDirector sharedDirector] winSize];
         
         //Go back Function
-        CCMenuItemFont *main = [CCMenuItemFont itemFromString:@"Main Menu" target:self selector:@selector(mainMenu:)];
+        CCMenuItemFont *main = [CCMenuItemFont itemFromString:@"Finshed Placing" target:self selector:@selector(continueGame:)];
         [main setFontName:@"American Typewriter"];
         [main setFontSize:28];
         
@@ -199,6 +202,14 @@ int counter =0;
     selSprite.position = [self boundLayerPos:selSprite.position ofRect:tileMap.boundingBox];
     selSprite.position = [self snapSpriteToGrid:selSprite.position];
    
+}
+
+//gets starting positions and sends game to game controller
+-(void)continueGame:(id) sender
+{
+    
+    //sends game to gamecontroller
+    [instance handleGame];
 }
 
 -(void) mainMenu:(id) sender{

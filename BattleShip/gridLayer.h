@@ -11,14 +11,17 @@
 #import "Player.h"
 #import "gameController.h"
 
-@interface gridLayer : CCLayer {
+@class gameController;
+
+@interface gridLayer : CCLayer
+{
     CCTMXTiledMap *tileMap;
     CCTMXLayer *layerOne;
     CCSprite * background;
     CCSprite * selSprite;
     NSMutableArray * movableSprites;
     CGPoint oldPos;
-    gameController * instance;
+    gameController *instance;
 }
 +(CCScene *) sceneWithPlayer/*:(Player*)Player*/;
 @property CGPoint oldPos;
