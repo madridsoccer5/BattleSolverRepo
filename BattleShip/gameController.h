@@ -11,8 +11,20 @@
 #import "Player.h"
 #import "Globals.h"
 @interface gameController :NSObject{
-
+    int placementCounter;
+    int turns;
     
 }
+
+//@property (retain) Player *player, *player2, *winner;
+@property (nonatomic, retain) CCTMXTiledMap *tileMap;
+@property (nonatomic, retain) CCTMXLayer *layerOne;
+@property int placementCounter, turns;
+//@property GameMode mode;
++(gameController *)getInstance;
+//resets game
+-(void)startOver;
+//runs game
+-(void)handleGame;
 
 @end

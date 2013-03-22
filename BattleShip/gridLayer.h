@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "Player.h"
+#import "gameController.h"
 
 @interface gridLayer : CCLayer {
     CCTMXTiledMap *tileMap;
@@ -17,7 +18,9 @@
     CCSprite * selSprite;
     NSMutableArray * movableSprites;
     CGPoint oldPos;
+    gameController * instance;
 }
 +(CCScene *) sceneWithPlayer/*:(Player*)Player*/;
 @property CGPoint oldPos;
+@property (retain) gameController *instance;
 @end
